@@ -53,7 +53,7 @@ echo "exo 1" ."\n";
 
 $tableau = [];
 
-// Saisie des valeurs
+
 while (true) {
     $valeur = readline("Saisir une valeur (ou 'q' pour terminer) : ");
     
@@ -63,19 +63,25 @@ while (true) {
     }
     
 
-    $tableau[] = intval($valeur);
+    $tab[] = intval($valeur);
 }
-//  $estVrai = true;
-//  while($estVrai){
-//      $estVrai = false;
-//  for($i =0;$i<=count($tab)-2;$i++){
-//  if($tab[$i]>$tab[$i+1]){
-//  $temp = $tab[$i];
-//  $tab[$i]=$tab[$i+1];
-//  $tab[$i+1] =$temp ;
-//  $estVrai = true;
-//  }   
- 
+ $estVrai = true;
+ while($estVrai){
+     $estVrai = false;
+ for($i =0;$i<=count($tab)-2;$i++){
+ if($tab[$i]>$tab[$i+1]){
+ $temp = $tab[$i];
+ $tab[$i]=$tab[$i+1];
+ $tab[$i+1] =$temp ;
+ $estVrai = true;
+ }  
+
+}
+
+}
+foreach($tab as $teste){
+echo("$teste"."\n");
+}
 $isConsecutif = true;
 $n = count($tableau);
 
@@ -95,4 +101,4 @@ if ($isConsecutif) {
     echo "Les éléments du tableau ne sont pas tous consécutifs.";
 }
 
-?>
+
